@@ -68,6 +68,28 @@ require('./config/passport')(passport);
 app.use('/login', login);
 app.use('/signup', signup);
 
+//Storing documents/Images
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+      cb(null, './uploads');
+  }
+  , filename: (req, file, cb) => {
+      cb(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage });
+
+app.post('/uploadprofile', upload.array('photos', 5), (req, res) => {
+  if (req.session.user) {
+  console.log("working on profiles");
+  console.log('req.body', req.body);
+  res.end();
+  }
+});
+
+
+
 //start your server on posrt 3001
 app.listen(3001);
 console.log("Server Listening on port 3000");
