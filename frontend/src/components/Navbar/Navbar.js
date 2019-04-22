@@ -66,7 +66,7 @@ class Navbar extends Component {
                         <i class="fas fa-users" />
                       </span>
                     </div>
-                    <span className="expanded">Answer</span>
+                    <span className="expanded">Spaces</span>
                   </Link>
                 </div>
               </span>
@@ -81,7 +81,7 @@ class Navbar extends Component {
                         <i class="far fa-bell" />
                       </span>
                     </div>
-                    <span className="expanded">Answer</span>
+                    <span className="expanded">Notifications</span>
                   </Link>
                 </div>
               </span>
@@ -126,7 +126,7 @@ class Navbar extends Component {
               </div>
               <div className="askWrapper">
                 <Link to="#" className="askQuestionButton">
-                  Add Question Or Link
+                  Add Question or Link
                 </Link>
               </div>
             </div>

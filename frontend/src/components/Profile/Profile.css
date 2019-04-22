@@ -72,3 +72,38 @@
   text-align: center;
   margin: 0 0 0 100px;
 }
+
+/*quora */
+.edit-button {
+  position: absolute;
+  bottom: 18%;
+  left: 5%;
+  width: 100%;
+  background: transparent;
+  border: 0px;
+  color: white;
+  font-size: 11px;
+}
+.profileBoxWrapper {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 16px 0;
+  padding: 0 0 16px 0;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.credflex i {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  display: inherit;
+}
+
+.credflex a {
+  color: #888888;
+}
+.credflex i:hover {
+  cursor: pointer;
+}
