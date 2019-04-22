@@ -1,53 +1,57 @@
-.App {
-  text-align: center;
-}
-.signin {
-  font-family: "proxima nova", Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
+/*quora*/
+html {
+  font-weight: 400;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
   line-height: 1.4;
-  background-color: #f9f9f9;
-  position: relative;
-  overflow: auto;
-  border-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  height: auto;
-  margin: 100px auto 8px;
-  margin-top: 100px;
-  width: 400px;
-  min-width: 300px;
-  padding: 20px;
 }
-.auth {
-  background-color: #fff;
-  border-color: #ddd #ddd #d8d8d8;
-  box-shadow: 0 2px 0 rgba(175, 175, 175, 0.12);
+body {
+  text-align: left;
+  direction: ltr;
 }
-
-.loginHeaderContainer {
-  position: relative;
-  margin: 0 auto;
-  padding: 20px 0;
-  box-sizing: border-box;
+a {
+  text-decoration: none;
+  color: #2b6dad;
 }
-
-.loginHeaderContainer h1 {
-  font-size: 24px;
-  font-weight: lighter;
-  line-height: 26px;
-  text-align: right;
+.u-flex {
+  display: flex !important;
 }
-.profilepic {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
+.u-flex-row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
 }
-
-.profilecolumn {
-  text-align: center;
+.u-flex-none {
+  -webkit-box-flex: 0 !important;
+  -ms-flex: none !important;
+  flex: none !important;
 }
-
-.form-inline {
-  font-size: 1.2em;
+.u-flex-inline {
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -moz-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+.u-flex-align--center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+.u-margin-left--sm {
+  margin-left: 16px !important;
+}
+.u-margin-right--xs {
+  margin-right: 8px !important;
+}
+.u-flex-auto {
+  -webkit-box-flex: 1 !important;
+  -ms-flex: 1 1 auto !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+.display-none {
+  display: none;
 }

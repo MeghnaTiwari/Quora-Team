@@ -13,93 +13,124 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <div>
-        <div className="profilecolumn hide " id="abc">
-          <div className="profile-upper">
-            <div className="profileImgWrapper">
-              <div className="profileImg">
-                <img
-                  src="https://sjsu.instructure.com/images/thumbnails/52746627/2UmxWxdoeiQm1sLPurRmS4L2qqtF4yYhxpYt20sB"
-                  alt="Rohankumar Shah"
-                  className="rounded-circle"
-                />
-              </div>
-            </div>
-            <div className="LogoutButtonWrapper">
-              <Link to="/" onClick={this.logOut.bind(this)}>
-                <button className="btn btn-primary log">logout</button>
-              </Link>
-            </div>
+      <div className="siteHeader">
+        <div className="headerInner u-flex u-flex-row">
+          <div className="headerLogo u-flex-none">
+            <Link to="">
+              <span className="display-none">Quora</span>
+            </Link>
           </div>
-          <div className="profile-lower">
-            <ul>
-              <li>
-                <Link to="/profile">Profile</Link>
-              </li>
-              <li>
-                <Link to="/courses">Settings</Link>
-              </li>
-              <li>
-                <Link to="/courses">Files</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="navbar ">
-          <header id="navigation-bar">
-            <ul className="navul">
-              <div>
-                <img
-                  src="https://farm4.staticflickr.com/3894/14354234874_11c95cffeb_b.jpg"
-                  alt="logo"
-                  className="navbarlogo"
-                />
-              </div>
-              <br />
-              <li>
-                <Link to="/Dashboard">
-                  <i className="fas fa-tachometer-alt fa-3x" />
-                  <br />
-                  <span className="navbartext">Dashboard</span>
-                </Link>
-              </li>
-              <br />
-              <li>
-                <i
-                  className="far fa-user fa-3x"
-                  onClick={this.show.bind(this)}
-                />
-                <br />
-                <span className="navbartext">Profile</span>
-              </li>
-              <br />
-              <li>
-                <Link to="/AllCourses">
-                  <i className="fa fa-book fa-3x" />
-                  <br />
-                  <span className="navbartext">Courses</span>
-                </Link>
-              </li>
-              <br />
-              <li>
-                <Link to="/courses">
-                  <i className="fas fa-envelope-open-text fa-3x" />
-                  <br />
-                  <span className="navbartext">Inbox</span>
-                </Link>
-              </li>
-              <br />
-              <li className="logoutbutton">
-                <span>
-                  <Link to="/" onClick={this.logOut.bind(this)}>
-                    <i className="fas fa-power-off fa-3x" />
-                    <br />
-                    <span className="navbartext"> logOut</span>
+          <div className="headerContents u-flex u-flex-auto u-margin-left--sm">
+            <div className="headerNav" role="navigation">
+              <span>
+                <div className="sideHeaderNavItem">
+                  <Link to="#home" className="navItemLink">
+                    <div className="u-margin-right-xs u-flex-inline">
+                      <span
+                        className="ui-icon ui-icon-color-grey icon-size-regular"
+                        aria-hidden="true"
+                      >
+                        <i
+                          class="far fa-newspaper"
+                          size="width:24px;height:24px"
+                        />
+                      </span>
+                    </div>
+                    <span className="expanded">Home</span>
                   </Link>
+                </div>
+              </span>
+              <span>
+                <div className="sideHeaderNavItem">
+                  <Link to="#home" className="navItemLink">
+                    <div className="u-margin-right-xs u-flex-inline">
+                      <span
+                        className="ui-icon ui-icon-color-grey icon-size-regular"
+                        aria-hidden="true"
+                      >
+                        <i class="far fa-edit" />
+                      </span>
+                    </div>
+                    <span className="expanded">Answer</span>
+                  </Link>
+                </div>
+              </span>
+              <span>
+                <div className="sideHeaderNavItem">
+                  <Link to="#home" className="navItemLink">
+                    <div className="u-margin-right-xs u-flex-inline">
+                      <span
+                        className="ui-icon ui-icon-color-grey icon-size-regular"
+                        aria-hidden="true"
+                      >
+                        <i class="fas fa-users" />
+                      </span>
+                    </div>
+                    <span className="expanded">Answer</span>
+                  </Link>
+                </div>
+              </span>
+              <span>
+                <div className="sideHeaderNavItem">
+                  <Link to="#home" className="navItemLink">
+                    <div className="u-margin-right-xs u-flex-inline">
+                      <span
+                        className="ui-icon ui-icon-color-grey icon-size-regular"
+                        aria-hidden="true"
+                      >
+                        <i class="far fa-bell" />
+                      </span>
+                    </div>
+                    <span className="expanded">Answer</span>
+                  </Link>
+                </div>
+              </span>
+            </div>
+            <div className="headerRightWrapper u-flex u-flex-align--center">
+              <div className="searchBar">
+                <div className="lookupBarSelector selector" tabIndex="-1">
+                  <div className="selectorInputWrpaper">
+                    <input
+                      className="selectorInput text"
+                      type="text"
+                      data-lpignore="true"
+                      autoFocus="true"
+                      placeholder="Search Quora"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span>
+                  <div className="hover-menu hidden">
+                    <div className="hover-menu-contents">
+                      <Link to="#profileImage" className="navItemLink">
+                        <span className="expanded">
+                          <span className="photoWrapper">
+                            <div id="#123">
+                              <span className="photo-tooltip">
+                                <img
+                                  className="profileImage"
+                                  height="50px"
+                                  width="50px"
+                                  src={`https://qph.fs.quoracdn.net/main-thumb-70332528-50-qpikqkavbsrjbupveiqfitmnpiraxvsw.jpeg`}
+                                />
+                              </span>
+                            </div>
+                          </span>
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
                 </span>
-              </li>
-            </ul>
-          </header>
+              </div>
+              <div className="askWrapper">
+                <Link to="#" className="askQuestionButton">
+                  Add Question Or Link
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
