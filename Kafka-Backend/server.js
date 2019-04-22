@@ -31,6 +31,7 @@ function handleTopicRequest(topic_name, function_name){
                 console.log('Data: ', data);
             });
             return;
+            
 
         });
     });

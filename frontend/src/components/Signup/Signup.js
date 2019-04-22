@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { Field, reduxForm } from "redux-form";
-import "./login.css";
+import "./signup.css";
+import axios from "axios";
 import { connect } from "react-redux";
-var loginUser = require("../../Actions/authentication").loginUser;
+var signupUser = require("../../Actions/authentication").signupUser;
 
 //Define a Login Component
-class Login extends Component {
+class Signup extends Component {
   constructor(props) {
     super(props);
   }
@@ -29,8 +30,8 @@ class Login extends Component {
 
   //submit Login handler to send a request to the node backend
   onSignup = values => {
-    // this.props.loginUser(values, this.props.history);
-    console.log("values ", values);
+    //this.props.signupUser(values, this.props.history);
+    console.log("values entered ", values);
   };
 
   render() {
@@ -38,12 +39,34 @@ class Login extends Component {
     return (
       <div>
         <div className="bg_container">
-          <div className="login">
-            <img src="//qsf.fs.quoracdn.net/-3-images.logo.wordmark_default.svg-26-bfa6b94bc0d6af2e.svg" />
-            <h4>A place to share knowledge and better understand the world</h4>
-            <h4>Login</h4>
-            <form onSubmit={handleSubmit(this.onSignup.bind(this))}>
-              <div className="form-group">
+          <div className="signup">
+            <div className="form">
+              <img src="//qsf.fs.quoracdn.net/-3-images.logo.wordmark_default.svg-26-bfa6b94bc0d6af2e.svg" />
+              <h4>
+                A place to share knowledge and better understand the world
+              </h4>
+              <form onSubmit={handleSubmit(this.onSignup.bind(this))}>
+                <div className="row">
+                  <div className="col-md-6">
+                    <Field
+                      label="First Name"
+                      type="text"
+                      component={this.renderField}
+                      name="firstName"
+                      className="form-control"
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <Field
+                      label="Last Name"
+                      type="text"
+                      component={this.renderField}
+                      name="lastName"
+                      className="form-control"
+                    />
+                  </div>
+                </div>
+
                 <Field
                   label="Email"
                   type="text"
@@ -51,8 +74,7 @@ class Login extends Component {
                   name="email"
                   className="form-control"
                 />
-              </div>
-              <div className="form-group">
+
                 <Field
                   label="Password"
                   type="password"
@@ -60,13 +82,14 @@ class Login extends Component {
                   name="password"
                   className="form-control"
                 />
-              </div>
-              <button className="btn btn-primary">Login</button>
-              <br />
-              <Link to="/signup">
-                <span> Do not have an account ? </span>
-              </Link>
-            </form>
+                <div>
+                  <button className="btn btn-primary">Sign Up</button>
+                  <Link to="/login" style={{ display: "block" }}>
+                    <span> Already have an account ? </span>
+                  </Link>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -107,12 +130,9 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default reduxForm({ mapStateToProps, validate, form: "login" })(
+export default reduxForm({ mapStateToProps, validate, form: "signup" })(
   connect(
     null,
-    { loginUser }
-  )(withRouter(Login))
+    { signupUser }
+  )(withRouter(Signup))
 );
-
-//export Login Component
-// export default Signup;
